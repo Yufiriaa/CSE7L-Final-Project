@@ -245,16 +245,11 @@ else: ?>
     </nav>
     <div class="sb-footer">
       <div class="sb-user">
-        <div class="sb-user-content">
-          <div class="sb-avatar"><?= h(mb_substr($user['FullName'],0,1)) ?></div>
-          <div>
-            <div class="sb-name"><?= h($user['FullName']) ?></div>
-            <div class="sb-prog"><?= h($user['Program']) ?></div>
-          </div>
+        <div class="sb-avatar"><?= h(mb_substr($user['FullName'],0,1)) ?></div>
+        <div>
+          <div class="sb-name"><?= h($user['FullName']) ?></div>
+          <div class="sb-prog"><?= h($user['Program']) ?></div>
         </div>
-        <?php if ($user['College'] ?? false): ?>
-        <img src="./assets/images/<?= h($user['College']) ?>.png" alt="College" style="width:40px;height:40px;border-radius:4px;" title="<?= h($user['College']) ?>">
-        <?php endif; ?>
       </div>
       <form method="POST">
         <input type="hidden" name="action" value="logout">
